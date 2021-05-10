@@ -32,6 +32,8 @@ targetBytes = [(0xFF).to_bytes(1, byteorder='big'), (partC ^ 0xFF).to_bytes(1, b
                (partB ^ 0xFF).to_bytes(1, byteorder='big'), (partA ^ 0xFF).to_bytes(1, byteorder='big')]
 
 barray[98:102] = targetBytes
+barray[102:106] = targetBytes
+barray[106:110] = targetBytes
 
 outfile =  open("out.bin", "wb")
 for byteitem in barray:
